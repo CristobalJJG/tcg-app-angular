@@ -1,1 +1,11 @@
-<p *ngIf="card.length > 0">{{card[0].name}}</p>
+<div class="card">
+    <img src="{{card[0].images.large}}" alt="{{card[0].name}}" class="img">
+    <span></span>
+    <div class="info">
+        <p>{{card[0].name}}</p>
+        <p>Normal: {{card[0].tcgplayer?.prices?.normal?.market}}</p>
+        <p>Holo: {{card[0].tcgplayer?.prices?.holofoil?.market}}</p>
+        <p>Reverse Holo:{{card[0].tcgplayer?.prices?.reverseHolofoil?.market}}</p>
+    </div>
+
+</div>
