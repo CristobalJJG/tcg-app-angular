@@ -17,6 +17,7 @@ export class CardComponent implements OnInit {
     console.log(this.card.length);
   }
   async getPokemon() {
-    await this.pk.getPokemonById().then((data: Card) => this.card.push(data));
+    //await this.pk.getPokemonById("xy1-1").then((data: Card) => this.card.push(data));
+    await this.pk.getPokemonBySet("name:Gengar").then((data: Card[]) => this.card.push(data[0]));
   }
 }
