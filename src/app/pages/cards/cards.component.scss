@@ -1,0 +1,8 @@
+@import "src/styles.scss";
+
+.container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    height: 100%;
+    gap: $grid-gap;
+}
