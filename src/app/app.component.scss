@@ -1,0 +1,21 @@
+@import "src/styles.scss";
+
+.bg {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "header"
+        "main";
+    grid-template-rows: 75px 0 1fr;
+    padding: 32px;
+    gap: calc($grid-gap / 2);
+
+    .h {
+        grid-area: header;
+    }
+
+    .m {
+        grid-area: main;
+    }
+
+}
