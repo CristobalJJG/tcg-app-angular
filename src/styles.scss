@@ -2,6 +2,7 @@
 @import "primeng/resources/themes/lara-dark-purple/theme.css";
 @import "primeng/resources/primeng.css";
 
+
 $grid-gap: 16px;
 
 * {
@@ -21,4 +22,8 @@ body {
 .box {
     background-color: #4f4f4f;
     border-radius: 10px;
+}
+
+i.pi {
+    font-size: 1.5rem;
 }

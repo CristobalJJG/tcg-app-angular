@@ -7,6 +7,6 @@ import { Card } from 'pokemon-tcg-sdk-typescript/dist/sdk';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() card!: Card | any;
+  @Input() card!: Card;
 
 }

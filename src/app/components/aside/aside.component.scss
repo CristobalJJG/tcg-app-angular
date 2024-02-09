@@ -1,0 +1,21 @@
+@import "primeicons/primeicons.css";
+@import "/src/styles.scss";
+
+.aside {
+    padding: $grid-gap;
+}
+
+.h {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .pi-filter {
+        font-size: 1rem;
+    }
+}
+
+.pi-times,
+.pi-bars {
+    cursor: pointer;
+}

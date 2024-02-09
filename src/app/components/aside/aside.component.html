@@ -1,1 +1,13 @@
-<p>aside works!</p>
+<div class="aside" [style.width]="open ? '300px' : 'auto'">
+    <header class="h" *ngIf="open; else cross">
+        <h3>
+            <i class="pi pi-filter"></i>
+            Filtros
+        </h3>
+        <i class="pi pi-times" (click)="toggle()"></i>
+    </header>
+</div>
+
+<ng-template #cross>
+    <i class="pi pi-bars" (click)="toggle()"></i>
+</ng-template>
