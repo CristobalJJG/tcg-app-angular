@@ -1,11 +1,12 @@
-<div class="card">
-    <img src="{{card[0].images.large}}" alt="{{card[0].name}}" class="img">
+<div class="card" data-aos="fade-up">
+    <img src="{{card.images.large}}" alt="{{card.name}}" class="img">
     <span></span>
     <div class="info">
-        <p>{{card[0].name}}</p>
-        <p>Normal: {{card[0].tcgplayer?.prices?.normal?.market}}</p>
-        <p>Holo: {{card[0].tcgplayer?.prices?.holofoil?.market}}</p>
-        <p>Reverse Holo:{{card[0].tcgplayer?.prices?.reverseHolofoil?.market}}</p>
+        <h2>{{card.name}}</h2>
+        <p *ngIf="card.tcgplayer?.prices?.normal?.market">Normal: {{card.tcgplayer?.prices?.normal?.market}}</p>
+        <p *ngIf="card.tcgplayer?.prices?.holofoil?.market">Holo: {{card.tcgplayer?.prices?.holofoil?.market}}</p>
+        <p *ngIf="card.tcgplayer?.prices?.reverseHolofoil?.market">Reverse
+            Holo:{{card.tcgplayer?.prices?.reverseHolofoil?.market}}</p>
     </div>
 
 </div>
