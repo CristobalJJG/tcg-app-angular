@@ -10,9 +10,6 @@ import { PokemonTcgService } from 'src/app/services/pokemon-tcg.service';
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent {
-  info: CardInfo = {
-    name: '',
-  };
   deck: Card[] = [];
 
   constructor(private pk: PokemonTcgService) {
@@ -27,9 +24,8 @@ export class CardsComponent {
     });
   }
 
-  recieveInfo(event: any) {
-    this.info = event;
+  recieveInfo(event: CardInfo) {
     this.deck = [];
-    this.getPokemon(this.info);
+    this.getPokemon(event);
   }
 }

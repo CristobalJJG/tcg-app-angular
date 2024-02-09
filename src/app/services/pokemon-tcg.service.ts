@@ -23,7 +23,7 @@ export class PokemonTcgService {
     return this.callAPI(`https://api.pokemontcg.io/v2/cards?q=${q} &pageSize=${pSize} &page=${p}`);
   }
 
-  async callAPI(url: string) {
+  async callAPI(url: string): Promise<Card[]> {
     return await axios.get(url)
       .then(response => {
         return JSON.parse(response.request.response).data;

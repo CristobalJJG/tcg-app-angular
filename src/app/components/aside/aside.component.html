@@ -9,7 +9,7 @@
 
     <section *ngIf="open">
         <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="info.name" pattern="[a-zA-Z]"
-            (change)="sendToMain()">
+            (keypress)="sendToMain()">
     </section>
 </div>
 

@@ -7,8 +7,8 @@ import { CardInfo } from 'src/app/models/info';
   styleUrls: ['./aside.component.scss']
 })
 export class AsideComponent {
-  @Input() info!: CardInfo;
   @Output() event = new EventEmitter<CardInfo>();
+  info: CardInfo = { name: '' };
 
   open = true;
   toggle() { this.open = !this.open; }
