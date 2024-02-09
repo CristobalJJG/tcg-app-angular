@@ -8,8 +8,10 @@
     </header>
 
     <section *ngIf="open">
-        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="info.name" pattern="[a-zA-Z]"
-            (keypress)="sendToMain()">
+        <input type="text" name="nombre" #nombre="ngModel" placeholder="Nombre" [(ngModel)]="info.name"
+            pattern="[a-zA-Z]" (keypress)="sendToMain()">
+        <input type="text" name="nombre" #nombre="ngModel" placeholder="Nombre" [(ngModel)]="info.name"
+            pattern="[a-zA-Z]" (keypress)="sendToMain()">
     </section>
 </div>
 

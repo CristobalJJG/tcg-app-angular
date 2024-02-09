@@ -18,7 +18,6 @@ export class CardsPage {
 
   async getPokemon(q?: CardInfo) {
     let aux = q ? new TcgQueryPipe().transform(q) : '';
-    console.log(aux, q)
     await this.pk.getPokemonBySet(aux).then((data: Card[]) => {
       data.forEach((card: Card) => { this.deck.push(card); });
     });
