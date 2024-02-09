@@ -6,6 +6,11 @@
         </h3>
         <i class="pi pi-times" (click)="toggle()"></i>
     </header>
+
+    <section *ngIf="open">
+        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="info.name" pattern="[a-zA-Z]"
+            (change)="sendToMain()">
+    </section>
 </div>
 
 <ng-template #cross>

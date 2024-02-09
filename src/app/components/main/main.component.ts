@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Card } from 'pokemon-tcg-sdk-typescript/dist/sdk';
+import { CardInfo } from 'src/app/models/info';
 import { PokemonTcgService } from 'src/app/services/pokemon-tcg.service';
 
 @Component({
@@ -8,14 +9,5 @@ import { PokemonTcgService } from 'src/app/services/pokemon-tcg.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-  deck: Card[] = [];
-  constructor(private pk: PokemonTcgService) {
-    this.getPokemon();
-  }
-
-  async getPokemon() {
-    await this.pk.getPokemonBySet().then((data: Card[]) => {
-      data.forEach((card: Card) => { this.deck.push(card); });
-    });
-  }
+  @Input() deck!: Card[];
 }

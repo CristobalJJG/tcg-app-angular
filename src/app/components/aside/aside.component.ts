@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CardInfo } from 'src/app/models/info';
 
 @Component({
@@ -7,11 +7,11 @@ import { CardInfo } from 'src/app/models/info';
   styleUrls: ['./aside.component.scss']
 })
 export class AsideComponent {
-
-    name: "",
-  }
+  @Input() info!: CardInfo;
+  @Output() event = new EventEmitter<CardInfo>();
 
   open = true;
   toggle() { this.open = !this.open; }
 
+  sendToMain() { console.log(this.info); this.event.emit(this.info); }
 }

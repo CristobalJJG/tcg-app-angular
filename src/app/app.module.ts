@@ -10,6 +10,8 @@ import { MainComponent } from './components/main/main.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { CardComponent } from './components/card/card.component';
 import { CardsComponent } from './pages/cards/cards.component';
+import { FormsModule } from '@angular/forms';
+import { TcgQueryPipe } from './pipes/tcg-query.pipe';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,11 @@ import { CardsComponent } from './pages/cards/cards.component';
     AsideComponent,
     CardComponent,
     CardsComponent,
+    TcgQueryPipe,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ButtonModule,
   ],
