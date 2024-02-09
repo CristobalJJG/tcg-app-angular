@@ -18,7 +18,8 @@ export class PokemonTcgService {
   }
 
   /* Get a deck of cards */
-  async getPokemonBySet(q: string, p: number = 1, pSize: number = 20, orderBy?: string, select?: string): Promise<Card[]> {
+  async getPokemonBySet(q?: string, p: number = 1, pSize: number = 20, orderBy?: string, select?: string): Promise<Card[]> {
+    if (q === undefined) return this.callAPI(`https://api.pokemontcg.io/v2/cards?pageSize=${pSize} &page=${p}`);
     return this.callAPI(`https://api.pokemontcg.io/v2/cards?q=${q} &pageSize=${pSize} &page=${p}`);
   }
 
