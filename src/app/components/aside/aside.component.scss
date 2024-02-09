@@ -15,6 +15,11 @@
     }
 }
 
+.burguer {
+    display: flex;
+    justify-content: center;
+}
+
 .pi-times,
 .pi-bars {
     cursor: pointer;

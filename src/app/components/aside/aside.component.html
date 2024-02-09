@@ -1,4 +1,4 @@
-<div class="aside" [style.width]="open ? '300px' : 'auto'">
+<div class="aside" [style.width]="open ? '300px' : '75px'">
     <header class="h" *ngIf="open; else cross">
         <h3>
             <i class="pi pi-filter"></i>
@@ -14,5 +14,7 @@
 </div>
 
 <ng-template #cross>
-    <i class="pi pi-bars" (click)="toggle()"></i>
+    <div class="burguer">
+        <i class="pi pi-bars" (click)="toggle()"></i>
+    </div>
 </ng-template>

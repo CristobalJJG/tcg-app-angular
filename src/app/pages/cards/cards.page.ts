@@ -6,10 +6,10 @@ import { PokemonTcgService } from 'src/app/services/pokemon-tcg.service';
 
 @Component({
   selector: 'app-cards',
-  templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.scss']
+  templateUrl: './cards.page.html',
+  styleUrls: ['./cards.page.scss']
 })
-export class CardsComponent {
+export class CardsPage {
   deck: Card[] = [];
 
   constructor(private pk: PokemonTcgService) {
