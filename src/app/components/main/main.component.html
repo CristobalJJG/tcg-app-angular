@@ -1,1 +1,7 @@
-<app-card></app-card>
+<section *ngIf="deck.length > 0; else empty">
+    <article *ngFor="let c of deck">
+        <app-card [card]="c"></app-card>
+    </article>
+</section>
+
+<ng-template #empty>Cargando...</ng-template>
