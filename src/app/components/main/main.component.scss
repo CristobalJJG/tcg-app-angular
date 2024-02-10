@@ -1,0 +1,15 @@
+@import "src/styles.scss";
+
+.flex {
+    align-items: center;
+    justify-content: end;
+}
+
+.grid {
+    width: 100%;
+    padding: $grid-gap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: $grid-gap;
+}
